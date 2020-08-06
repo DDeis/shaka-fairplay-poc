@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POC - Shaka Player - FairPlay</title>
+
+  <!-- Shaka Player compiled library: -->
+  <!-- <script src="/node_modules/shaka-player/dist/shaka-player.compiled.debug.js"></script> -->
+
+  <!-- Shaka Player ui compiled library: -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/3.0.2/shaka-player.ui.debug.min.js"></script>
+  <!-- Shaka Player ui compiled library default CSS: -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/3.0.2/controls.min.css">
+
+  <!-- Chromecast SDK (if you want Chromecast support for your app): -->
+  <script defer src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
+
+  <!-- IMA HTML5 SDK (for serving Client Side ads): -->
+  <script type="text/javascript" src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+  <!-- IMA DAI SDK (for serving Server Side ads): -->
+  <script type="text/javascript" src="https://imasdk.googleapis.com/js/sdkloader/ima3_dai.js"></script>
+
+  <!-- Your application source: -->
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+
+<body>
+  <!-- <h1>Shaka Player POC</h1> -->
+
+  <!-- The data-shaka-player-container tag will make the UI library place the controls in this div.
+        The data-shaka-player-cast-receiver-id tag allows you to provide a Cast Application ID that
+          the cast button will cast to; the value provided here is the sample cast receiver. -->
+  <div data-shaka-player-container style="max-width:40em" data-shaka-player-cast-receiver-id="7B25EC44">
+    <!-- The data-shaka-player tag will make the UI library use this video element.
+            If no video is provided, the UI will automatically make one inside the container div. -->
+    <video autoplay data-shaka-player id="video" style="width:100%;height:100%"></video>
+  </div>
+
+</body>
+
+</html>
